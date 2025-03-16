@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - OzonePay</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <style>
+        /* Additional styles specific to login page */
+        .auth-container {
+            max-width: 450px;
+            margin: 3rem auto;
+            background-color: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+        
+        .auth-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .auth-logo {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+        
+        .auth-title {
+            font-size: 1.5rem;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .auth-subtitle {
+            color: #666;
+        }
+        
+        .tabs {
+            justify-content: center;
+            border-bottom: none;
+            margin-bottom: 2rem;
+        }
+        
+        .auth-options {
+            display: flex;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        
+        .auth-option {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .auth-option:hover {
+            background-color: var(--light-color);
+        }
+        
+        .divider {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin: 1.5rem 0;
+            color: #666;
+        }
+        
+        .divider::before,
+        .divider::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .divider::before {
+            margin-right: 1rem;
+        }
+        
+        .divider::after {
+            margin-left: 1rem;
+        }
+        
+        .remember-forgot {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .auth-footer {
+            text-align: center;
+            margin-top: 2rem;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <img src="images/logo.png" alt="OzonePay Logo">
+                <div class="logo-text">OzonePay</div>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="products.html" class="nav-link">Products</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                <li class="nav-item"><a href="apply.html" class="nav-link">Apply Now</a></li>
+                <li class="nav-item"><a href="login.html" class="nav-link active">Login</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="Toggle navigation menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="auth-container">
+                <div class="auth-header">
+                    <div class="auth-logo">
+                        <img src="images/logo.png" alt="OzonePay Logo" width="60">
+                    </div>
+                    <h1 class="auth-title">Welcome to OzonePay</h1>
+                    <p class="auth-subtitle">Sign in to access your green financing dashboard</p>
+                </div>
+                
+                <div class="tab-container">
+                    <div class="tabs">
+                        <div class="tab active" data-tab="login">Login</div>
+                        <div class="tab" data-tab="register">Register</div>
+                    </div>
+                    
+                    <!-- Login Tab -->
+                    <div class="tab-content active" id="tab-login">
+                        <form id="login-form" action="dashboard.html" method="GET">
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" id="email" name="email" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" id="password" name="password" class="form-control" required>
+                            </div>
+                            
+                            <div class="remember-forgot">
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="remember-me" name="remember">
+                                    <label for="remember-me">Remember me</label>
+                                </div>
+                                <a href="#" class="forgot-password">Forgot password?</a>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">Sign In</button>
+                        </form>
+                        
+                        <div class="divider">or continue with</div>
+                        
+                        <div class="auth-options">
+                            <div class="auth-option">
+                                <i class="fab fa-google"></i>
+                                <span>Google</span>
+                            </div>
+                            <div class="auth-option">
+                                <i class="fab fa-facebook-f"></i>
+                                <span>Facebook</span>
+                            </div>
+                            <div class="auth-option">
+                                <i class="fas fa-mobile-alt"></i>
+                                <span>Mobile</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Register Tab -->
+                    <div class="tab-content" id="tab-register">
+                        <form id="register-form" action="dashboard.html" method="GET">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="first-name" class="form-label">First Name</label>
+                                    <input type="text" id="first-name" name="firstName" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="last-name" class="form-label">Last Name</label>
+                                    <input type="text" id="last-name" name="lastName" class="form-control" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="register-email" class="form-label">Email Address</label>
+                                <input type="email" id="register-email" name="email" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="register-password" class="form-label">Password</label>
+                                <input type="password" id="register-password" name="password" class="form-control" required>
+                                <small class="form-helper">Password must be at least 8 characters long with a mix of letters, numbers, and symbols</small>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="confirm-password" class="form-label">Confirm Password</label>
+                                <input type="password" id="confirm-password" name="confirmPassword" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="terms-conditions" name="terms" required>
+                                    <label for="terms-conditions">I agree to the <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a></label>
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">Create Account</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="auth-footer">
+                    <p>By signing in, you agree to OzonePay's <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="logo">
+                        <img src="images/logo.png" alt="OzonePay Logo">
+                        <div class="logo-text">OzonePay</div>
+                    </div>
+                    <p>Bridging the green financing gap in Africa with technology-based solutions for a sustainable future.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="apply.html">Apply Now</a></li>
+                        <li><a href="login.html">Login</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Products</h3>
+                    <ul class="footer-links">
+                        <li><a href="products.html#solar">Solar Solutions</a></li>
+                        <li><a href="products.html#ev">Electric Vehicles</a></li>
+                        <li><a href="products.html#cooking">Clean Cooking</a></li>
+                        <li><a href="products.html#agri">Agricultural Tech</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Green Street, Accra, Ghana</li>
+                        <li><i class="fas fa-phone"></i> +233 50 123 4567</li>
+                        <li><i class="fas fa-envelope"></i> info@ozonepay.com</li>
+                    </ul>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 OzonePay. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Simple login/register form validation
+        document.addEventListener('DOMContentLoaded', function() {
+            // Tab switching
+            const tabs = document.querySelectorAll('.tab');
+            
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    // Update active tab
+                    tabs.forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Show corresponding content
+                    const tabId = this.getAttribute('data-tab');
+                    const tabContents = document.querySelectorAll('.tab-content');
+                    
+                    tabContents.forEach(content => {
+                        content.classList.remove('active');
+                    });
+                    
+                    document.getElementById(`tab-${tabId}`).classList.add('active');
+                });
+            });
+            
+            // Form submission
+            const loginForm = document.getElementById('login-form');
+            const registerForm = document.getElementById('register-form');
+            
+            if (loginForm) {
+                loginForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // In a real app, you would validate credentials here
+                    // For the prototype, just redirect to dashboard
+                    window.location.href = 'dashboard.html';
+                });
+            }
+            
+            if (registerForm) {
+                registerForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Validate passwords match
+                    const password = document.getElementById('register-password').value;
+                    const confirmPassword = document.getElementById('confirm-password').value;
+                    
+                    if (password !== confirmPassword) {
+                        alert('Passwords do not match!');
+                        return;
+                    }
+                    
+                    // In a real app, you would create the account here
+                    // For the prototype, just redirect to dashboard
+                    window.location.href = 'dashboard.html';
+                });
+            }
+            
+            // Forgot password link
+            const forgotPasswordLink = document.querySelector('.forgot-password');
+            
+            if (forgotPasswordLink) {
+                forgotPasswordLink.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    alert('A password reset link would be sent to your email in the live application.');
+                });
+            }
+            
+            // Social login options
+            const authOptions = document.querySelectorAll('.auth-option');
+            
+            if (authOptions.length > 0) {
+                authOptions.forEach(option => {
+                    option.addEventListener('click', function() {
+                        alert('Social login would be processed in the live application.');
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>

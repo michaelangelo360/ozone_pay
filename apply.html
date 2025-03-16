@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply Now - OzonePay</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <img src="images/logo.png" alt="OzonePay Logo">
+                <div class="logo-text">OzonePay</div>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="products.html" class="nav-link">Products</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                <li class="nav-item"><a href="apply.html" class="nav-link active">Apply Now</a></li>
+                <li class="nav-item"><a href="login.html" class="nav-link">Login</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="Toggle navigation menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <section class="page-header">
+            <div class="container">
+                <h1>Apply for Green Financing</h1>
+                <p>Complete your application in just a few simple steps</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="application-container">
+                    <!-- Progress Bar -->
+                    <div class="progress-container">
+                        <div class="progress-bar" id="application-progress"></div>
+                    </div>
+                    
+                    <!-- Application Steps -->
+                    <div class="form-steps">
+                        <div class="form-step active" data-step="1">
+                            <div class="step-number">1</div>
+                            <div class="step-title">Personal Information</div>
+                        </div>
+                        <div class="form-step" data-step="2">
+                            <div class="step-number">2</div>
+                            <div class="step-title">Product Selection</div>
+                        </div>
+                        <div class="form-step" data-step="3">
+                            <div class="step-number">3</div>
+                            <div class="step-title">Financial Details</div>
+                        </div>
+                        <div class="form-step" data-step="4">
+                            <div class="step-number">4</div>
+                            <div class="step-title">Verification</div>
+                        </div>
+                        <div class="form-step" data-step="5">
+                            <div class="step-number">5</div>
+                            <div class="step-title">Confirmation</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Application Form -->
+                    <form id="application-form" class="application-form">
+                        <!-- Step 1: Personal Information -->
+                        <div class="step-content active" id="step-1">
+                            <h3 class="form-section-title">Personal Information</h3>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="first-name" class="form-label">First Name*</label>
+                                    <input type="text" id="first-name" name="firstName" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="last-name" class="form-label">Last Name*</label>
+                                    <input type="text" id="last-name" name="lastName" class="form-control" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email" class="form-label">Email Address*</label>
+                                    <input type="email" id="email" name="email" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone" class="form-label">Phone Number*</label>
+                                    <input type="tel" id="phone" name="phone" class="form-control" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="address" class="form-label">Home Address*</label>
+                                <input type="text" id="address" name="address" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="city" class="form-label">City*</label>
+                                    <input type="text" id="city" name="city" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="region" class="form-label">Region/State*</label>
+                                    <input type="text" id="region" name="region" class="form-control" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="id-type" class="form-label">ID Type*</label>
+                                <select id="id-type" name="idType" class="form-control" required>
+                                    <option value="">Select ID Type</option>
+                                    <option value="national-id">National ID</option>
+                                    <option value="passport">Passport</option>
+                                    <option value="drivers-license">Driver's License</option>
+                                    <option value="voter-id">Voter's ID</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="id-number" class="form-label">ID Number*</label>
+                                <input type="text" id="id-number" name="idNumber" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-buttons">
+                                <button type="button" class="btn btn-outline disabled">Previous</button>
+                                <button type="button" class="btn btn-primary next-step">Next Step</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Step 2: Product Selection -->
+                        <div class="step-content" id="step-2">
+                            <h3 class="form-section-title">Product Selection</h3>
+                            
+                            <div class="form-group">
+                                <label for="product-category" class="form-label">Product Category*</label>
+                                <select id="product-category" name="productCategory" class="form-control" required>
+                                    <option value="">Select Category</option>
+                                    <option value="solar">Solar Power</option>
+                                    <option value="ev">Electric Vehicles</option>
+                                    <option value="cooking">Clean Cooking</option>
+                                    <option value="agri">Agricultural Tech</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="product" class="form-label">Product*</label>
+                                <select id="product" name="product" class="form-control" required disabled>
+                                    <option value="">Select Product</option>
+                                    <!-- Products will be populated by JavaScript -->
+                                </select>
+                            </div>
+                            
+                            <div id="selected-product-details" class="selected-product-details hidden">
+                                <div class="product-image">
+                                    <img src="" alt="Selected Product" id="product-image">
+                                </div>
+                                <div class="product-info">
+                                    <h4 id="product-name"></h4>
+                                    <p id="product-description"></p>
+                                    <div class="product-price" id="product-price"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="quantity" class="form-label">Quantity*</label>
+                                <input type="number" id="quantity" name="quantity" class="form-control" min="1" value="1" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="financing-amount" class="form-label">Financing Amount*</label>
+                                <input type="text" id="financing-amount" name="financingAmount" class="form-control" readonly>
+                            </div>
+                            
+                            <div class="form-buttons">
+                                <button type="button" class="btn btn-outline prev-step">Previous</button>
+                                <button type="button" class="btn btn-primary next-step">Next Step</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Step 3: Financial Details -->
+                        <div class="step-content" id="step-3">
+                            <h3 class="form-section-title">Financial Details</h3>
+                            
+                            <div class="form-group">
+                                <label for="income-source" class="form-label">Primary Source of Income*</label>
+                                <select id="income-source" name="incomeSource" class="form-control" required>
+                                    <option value="">Select Income Source</option>
+                                    <option value="employment">Formal Employment</option>
+                                    <option value="self-employment">Self-Employment</option>
+                                    <option value="farming">Farming</option>
+                                    <option value="business">Business Owner</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="monthly-income" class="form-label">Monthly Income (USD)*</label>
+                                <input type="number" id="monthly-income" name="monthlyIncome" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="employment-status" class="form-label">Employment Status*</label>
+                                <select id="employment-status" name="employmentStatus" class="form-control" required>
+                                    <option value="">Select Employment Status</option>
+                                    <option value="full-time">Full-time Employed</option>
+                                    <option value="part-time">Part-time Employed</option>
+                                    <option value="self-employed">Self-Employed</option>
+                                    <option value="contract">Contract Worker</option>
+                                    <option value="unemployed">Unemployed</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="employer-name" class="form-label">Employer/Business Name</label>
+                                <input type="text" id="employer-name" name="employerName" class="form-control">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="loan-term" class="form-label">Preferred Loan Term*</label>
+                                <select id="loan-term" name="loanTerm" class="form-control" required>
+                                    <option value="">Select Loan Term</option>
+                                    <option value="3">3 months</option>
+                                    <option value="6">6 months</option>
+                                    <option value="12">12 months</option>
+                                    <option value="18">18 months</option>
+                                    <option value="24">24 months</option>
+                                    <option value="36">36 months</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="payment-frequency" class="form-label">Preferred Payment Frequency*</label>
+                                <select id="payment-frequency" name="paymentFrequency" class="form-control" required>
+                                    <option value="">Select Payment Frequency</option>
+                                    <option value="daily">Daily</option>
+                                    <option value="weekly">Weekly</option>
+                                    <option value="bi-weekly">Bi-Weekly</option>
+                                    <option value="monthly">Monthly</option>
+                                </select>
+                            </div>
+                            
+                            <div class="calculator-result">
+                                <div class="result-item">
+                                    <span class="result-label">Estimated Payment Amount:</span>
+                                    <span class="result-value" id="estimated-payment">$0.00</span>
+                                </div>
+                                <div class="result-item">
+                                    <span class="result-label">Estimated Carbon Credits:</span>
+                                    <span class="result-value" id="estimated-credits">0 tons CO₂</span>
+                                </div>
+                            </div>
+                            
+                            <div class="form-buttons">
+                                <button type="button" class="btn btn-outline prev-step">Previous</button>
+                                <button type="button" class="btn btn-primary next-step">Next Step</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Step 4: Verification -->
+                        <div class="step-content" id="step-4">
+                            <h3 class="form-section-title">Verification</h3>
+                            
+                            <div class="form-group">
+                                <label for="id-upload" class="form-label">Upload ID Document*</label>
+                                <div class="file-upload">
+                                    <input type="file" id="id-upload" name="idUpload" accept="image/*,.pdf" required>
+                                    <label for="id-upload" class="file-upload-label">
+                                        <i class="fas fa-cloud-upload-alt"></i>
+                                        <span>Choose File</span>
+                                    </label>
+                                    <div class="file-info" id="id-file-info">No file chosen</div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="proof-of-income" class="form-label">Proof of Income*</label>
+                                <div class="file-upload">
+                                    <input type="file" id="proof-of-income" name="proofOfIncome" accept="image/*,.pdf" required>
+                                    <label for="proof-of-income" class="file-upload-label">
+                                        <i class="fas fa-cloud-upload-alt"></i>
+                                        <span>Choose File</span>
+                                    </label>
+                                    <div class="file-info" id="income-file-info">No file chosen</div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="mobile-money" class="form-label">Mobile Money Number*</label>
+                                <input type="tel" id="mobile-money" name="mobileMoneyNumber" class="form-control" required>
+                                <small class="form-helper">This will be used for repayments</small>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="emergency-contact" class="form-label">Emergency Contact Name*</label>
+                                <input type="text" id="emergency-contact" name="emergencyContactName" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="emergency-phone" class="form-label">Emergency Contact Phone*</label>
+                                <input type="tel" id="emergency-phone" name="emergencyContactPhone" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="terms-checkbox" name="termsAccepted" required>
+                                    <label for="terms-checkbox">I accept the <a href="#" target="_blank">Terms & Conditions</a> and <a href="#" target="_blank">Privacy Policy</a>*</label>
+                                </div>
+                            </div>
+                            
+                            <div class="form-buttons">
+                                <button type="button" class="btn btn-outline prev-step">Previous</button>
+                                <button type="button" class="btn btn-primary next-step">Submit Application</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Step 5: Confirmation -->
+                        <div class="step-content" id="step-5">
+                            <div class="confirmation-message">
+                                <div class="success-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <h3>Application Submitted Successfully!</h3>
+                                <p>Your application has been received and is being processed. Your application ID is: <strong id="application-id">AP2025001234</strong></p>
+                                <p>We will contact you within 24-48 hours regarding the status of your application.</p>
+                                
+                                <div class="next-steps">
+                                    <h4>Next Steps:</h4>
+                                    <ol>
+                                        <li>Our team will review your application and documentation</li>
+                                        <li>We'll perform a quick credit assessment</li>
+                                        <li>You'll receive notification of approval via SMS and email</li>
+                                        <li>Once approved, your product will be delivered, or you can collect it from our partner locations</li>
+                                    </ol>
+                                </div>
+                                
+                                <div class="action-buttons">
+                                    <a href="dashboard.html" class="btn btn-primary">Go to Dashboard</a>
+                                    <a href="index.html" class="btn btn-outline">Return to Home</a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>What documents do I need to apply?</h3>
+                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>You'll need a valid ID (National ID, Passport, Driver's License, or Voter's ID), proof of income (pay stubs, bank statements, or business records), and a mobile money account for repayments.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How long does approval take?</h3>
+                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Most applications are processed within 24-48 hours. You'll receive notification via SMS and email once your application is approved.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>What payment methods are accepted?</h3>
+                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We accept payments through mobile money (75% of customers), bank transfers, and through our network of payment agents.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>What happens if I miss a payment?</h3>
+                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We understand that circumstances can change. Contact our support team immediately, and we'll work with you to arrange a revised payment plan.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How do carbon credits work?</h3>
+                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>When you use our green products, you reduce carbon emissions. These reductions can be quantified as carbon credits, which are applied to reduce your repayment amount, helping you save money while helping the environment.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="logo">
+                        <img src="images/logo.png" alt="OzonePay Logo">
+                        <div class="logo-text">OzonePay</div>
+                    </div>
+                    <p>Bridging the green financing gap in Africa with technology-based solutions for a sustainable future.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="apply.html">Apply Now</a></li>
+                        <li><a href="login.html">Login</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Products</h3>
+                    <ul class="footer-links">
+                        <li><a href="products.html#solar">Solar Solutions</a></li>
+                        <li><a href="products.html#ev">Electric Vehicles</a></li>
+                        <li><a href="products.html#cooking">Clean Cooking</a></li>
+                        <li><a href="products.html#agri">Agricultural Tech</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Green Street, Accra, Ghana</li>
+                        <li><i class="fas fa-phone"></i> +233 50 123 4567</li>
+                        <li><i class="fas fa-envelope"></i> info@ozonepay.com</li>
+                    </ul>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 OzonePay. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/application.js"></script>
+</body>
+</html>

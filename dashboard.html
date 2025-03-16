@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - OzonePay</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <img src="images/logo.png" alt="OzonePay Logo">
+                <div class="logo-text">OzonePay</div>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="products.html" class="nav-link">Products</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                <li class="nav-item"><a href="dashboard.html" class="nav-link active">Dashboard</a></li>
+                <li class="nav-item"><a href="#" class="nav-link logout-link">Logout</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="Toggle navigation menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Dashboard Layout -->
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="user-info">
+                <div class="user-avatar">
+                    <img src="images/user-avatar.jpg" alt="User Avatar">
+                </div>
+                <div class="user-details">
+                    <h3 class="user-name">John Doe</h3>
+                    <p class="user-status">Active Member</p>
+                </div>
+            </div>
+            
+            <ul class="sidebar-menu">
+                <li class="sidebar-item">
+                    <a href="#overview" class="sidebar-link active" data-tab="overview">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <span>Overview</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#loans" class="sidebar-link" data-tab="loans">
+                        <i class="fas fa-hand-holding-usd"></i>
+                        <span>My Loans</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#carbon" class="sidebar-link" data-tab="carbon">
+                        <i class="fas fa-leaf"></i>
+                        <span>Carbon Credits</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#payments" class="sidebar-link" data-tab="payments">
+                        <i class="fas fa-credit-card"></i>
+                        <span>Payments</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#documents" class="sidebar-link" data-tab="documents">
+                        <i class="fas fa-file-alt"></i>
+                        <span>Documents</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#profile" class="sidebar-link" data-tab="profile">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Profile</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#support" class="sidebar-link" data-tab="support">
+                        <i class="fas fa-headset"></i>
+                        <span>Support</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Dashboard Content -->
+        <div class="dashboard-content">
+            <!-- Overview Tab -->
+            <div class="tab-content active" id="overview-tab">
+                <h2 class="dashboard-title">Dashboard Overview</h2>
+                
+                <div class="stats">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-dollar-sign"></i></div>
+                        <div class="stat-value">$1,254.20</div>
+                        <div class="stat-label">Total Financed</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-leaf"></i></div>
+                        <div class="stat-value">2.4 tons</div>
+                        <div class="stat-label">Carbon Credits</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-calendar-check"></i></div>
+                        <div class="stat-value">85%</div>
+                        <div class="stat-label">Repayment Status</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-battery-three-quarters"></i></div>
+                        <div class="stat-value">2</div>
+                        <div class="stat-label">Active Products</div>
+                    </div>
+                </div>
+                
+                <div class="dashboard-row">
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3>Payment Schedule</h3>
+                            <div class="card-actions">
+                                <button class="btn btn-sm btn-outline">View All</button>
+                            </div>
+                        </div>
+                        <div class="payment-summary">
+                            <div class="next-payment">
+                                <h4>Next Payment</h4>
+                                <div class="payment-amount">$42.80</div>
+                                <div class="payment-date">Due on April 15, 2025</div>
+                                <button class="btn btn-primary btn-sm">Make Payment</button>
+                            </div>
+                            <div class="payment-progress">
+                                <div class="progress-label">
+                                    <span>Payment Progress</span>
+                                    <span>8/12 payments</span>
+                                </div>
+                                <div class="progress-container">
+                                    <div class="progress-bar" style="width: 66%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3>Carbon Impact</h3>
+                        </div>
+                        <div class="carbon-tracker">
+                            <div class="tracker-circle">
+                                <div class="tracker-value">2.4</div>
+                                <div class="tracker-label">tons CO₂</div>
+                            </div>
+                            <div class="tracker-details">
+                                <p>Your green products have prevented 2.4 tons of CO₂ emissions!</p>
+                                <p>That's equivalent to planting 40 trees.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h3>My Products</h3>
+                        <div class="card-actions">
+                            <a href="products.html" class="btn btn-sm btn-outline">Browse More Products</a>
+                        </div>
+                    </div>
+                    <div class="active-products">
+                        <div class="product-item">
+                            <div class="product-image">
+                                <img src="images/solar-panel.jpg" alt="Solar Home System" class="product-img">
+                            </div>
+                            <div class="product-details">
+                                <div class="product-status">
+                                    <span class="badge badge-success">Active</span>
+                                </div>
+                                <h4 class="product-name">Solar Home System - 300W</h4>
+                                <div class="product-info">
+                                    <div class="info-item">
+                                        <span class="info-label">Purchased:</span>
+                                        <span class="info-value">January 15, 2025</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-label">Amount:</span>
+                                        <span class="info-value">$850</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-label">Warranty:</span>
+                                        <span class="info-value">2 years remaining</span>
+                                    </div>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="btn btn-sm btn-outline">View Details</button>
+                                    <button class="btn btn-sm btn-primary">Report Issue</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-item">
+                            <div class="product-image">
+                                <img src="images/cooking-stove.jpg" alt="Clean Cooking Stove" class="product-img">
+                            </div>
+                            <div class="product-details">
+                                <div class="product-status">
+                                    <span class="badge badge-success">Active</span>
+                                </div>
+                                <h4 class="product-name">Clean Cooking Stove</h4>
+                                <div class="product-info">
+                                    <div class="info-item">
+                                        <span class="info-label">Purchased:</span>
+                                        <span class="info-value">February 28, 2025</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-label">Amount:</span>
+                                        <span class="info-value">$120</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-label">Warranty:</span>
+                                        <span class="info-value">1 year remaining</span>
+                                    </div>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="btn btn-sm btn-outline">View Details</button>
+                                    <button class="btn btn-sm btn-primary">Report Issue</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Loans Tab -->
+            <div class="tab-content" id="loans-tab">
+                <h2 class="dashboard-title">My Loans</h2>
+                
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h3>Active Loans</h3>
+                    </div>
+                    <div class="table-container">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Loan ID</th>
+                                    <th>Product</th>
+                                    <th>Amount</th>
+                                    <th>Term</th>
+                                    <th>Monthly Payment</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>L2025-0042</td>
+                                    <td>Solar Home System</td>
+                                    <td>$850.00</td>
+                                    <td>12 months</td>
+                                    <td>$71.00</td>
+                                    <td><span class="badge badge-success">Active</span></td>
+                                    <td>
+                                        <button class="btn btn-sm btn-outline">Details</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>L2025-0086</td>
+                                    <td>Clean Cooking Stove</td>
+                                    <td>$120.00</td>
+                                    <td>6 months</td>
+                                    <td>$20.00</td>
+                                    <td><span class="badge badge-success">Active</span></td>
+                                    <td>
+                                        <button class="btn btn-sm btn-outline">Details</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h3>Loan History</h3>
+                    </div>
+                    <div class="table-container">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Loan ID</th>
+                                    <th>Product</th>
+                                    <th>Amount</th>
+                                    <th>Term</th>
+                                    <th>Date Closed</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>L2024-0012</td>
+                                    <td>Agriculture Seeds</td>
+                                    <td>$85.00</td>
+                                    <td>3 months</td>
+                                    <td>Dec 15, 2024</td>
+                                    <td><span class="badge badge-warning">Completed</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h3>Apply for New Financing</h3>
+                    </div>
+                    <div class="card-content">
+                        <p>Looking for additional green products? You can apply for additional financing for any of our products.</p>
+                        <div class="center-button">
+                            <a href="apply.html" class="btn btn-primary">Apply Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Carbon Credits Tab -->
+            <div class="tab-content" id="carbon-tab">
+                <h2 class="dashboard-title">Carbon Credits</h2>
+                
+                <div class="dashboard-card">
+                    <div class="carbon-tracker large">
+                        <div class="tracker-circle">
+                            <div class="tracker-value">2.4</div>
+                            <div class="tracker-label">tons CO₂</div>
+                        </div>
+                        <div class="tracker-details">
+                            <h3>Your Carbon Impact</h3>
+                            <p>Using green products has prevented 2.4 tons of CO₂ emissions, equivalent to:</p>
+                            <div class="carbon-equivalents">
+                                <div class="carbon-equivalent">
+                                    <div class="equivalent-icon"><i class="fas fa-tree"></i></div>
+                                    <div class="equivalent-value">40</div>
+                                    <div class="equivalent-label">Trees Planted</div>
+                                </div>
+                                <div class="carbon-equivalent">
+                                    <div class="equivalent-icon"><i class="fas fa-car"></i></div>
+                                    <div class="equivalent-value">9,600</div>
+                                    <div class="equivalent-label">km Not Driven</div>
+                                </div>
+                                <div class="carbon-equivalent">
+                                    <div class="equivalent-icon"><i class="fas fa-bolt"></i></div>
+                                    <div class="equivalent-value">3,200</div>
+                                    <div class="equivalent-label">kWh Saved</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h3>Carbon Credits History</h3>
+                    </div>
+                    <div class="table-container">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Product</th>
+                                    <th>Credits Earned</th>
+                                    <th>Value Applied</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Mar 1, 2025</td>
+                                    <td>Solar Home System</td>
+                                    <td>0.2 tons</td>
+                                    <td>$10.00</td>
+                                    <td><span class="badge badge-success">Applied</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Feb 1, 2025</td>
+                                    <td>Solar Home System</td>
+                                    <td>0.2 tons</td>
+                                    <td>$10.00</td>
+                                    <td><span class="badge badge-success">Applied</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Jan 1, 2025</td>
+                                    <td>Solar Home System</td>
+                                    <td>0.2 tons</td>
+                                    <td>$10.00</td>
+                                    <td><span class="badge badge-success">Applied</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h3>Carbon Savings Calculator</h3>
+                    </div>
+                    <div class="card-content">
+                        <p>Estimate your potential carbon savings and credit value with our calculator.</p>
+                        <div class="calculator-embedded">
+                            <div class="form-group">
+                                <label for="calculator-product" class="form-label">Select Product</label>
+                                <select id="calculator-product" class="form-control">
+                                    <option value="">Select a green product</option>
+                                    <option value="solar">Solar Home System</option>
+                                    <option value="ev">Electric Motorcycle</option>
+                                    <option value="stove">Clean Cooking Stove</option>
+                                    <option value="pump">Solar Water Pump</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="calculator-usage" class="form-label">Estimated Usage (hours/day)</label>
+                                <input type="range" min="1" max="24" value="8" class="range-slider" id="calculator-usage">
+                                <div class="slider-values">
+                                    <span>1h</span>
+                                    <span id="usage-value">8h</span>
+                                    <span>24h</span>
+                                </div>
+                            </div>
+                            <div class="calculator-result">
+                                <div class="result-item">
+                                    <span class="result-label">Estimated Annual CO₂ Reduction:</span>
+                                    <span class="result-value" id="carbon-reduction">0.0 tons</span>
+                                </div>
+                                <div class="result-item">
+                                    <span class="result-label">Estimated Annual Credit Value:</span>
+                                    <span class="result-value" id="credit-value">$0.00</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary" id="calculate-carbon">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Other tabs would be defined here -->
+            <div class="tab-content" id="payments-tab">
+                <h2 class="dashboard-title">Payments</h2>
+                <!-- Payment history and options would go here -->
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h3>Make a Payment</h3>
+                    </div>
+                    <div class="payment-card">
+                        <div class="payment-options">
+                            <div class="payment-option active">
+                                <div class="payment-option-icon">
+                                    <i class="fas fa-mobile-alt"></i>
+                                </div>
+                                <div>Mobile Money</div>
+                            </div>
+                            <div class="payment-option">
+                                <div class="payment-option-icon">
+                                    <i class="fas fa-university"></i>
+                                </div>
+                                <div>Bank Transfer</div>
+                            </div>
+                            <div class="payment-option">
+                                <div class="payment-option-icon">
+                                    <i class="fas fa-credit-card"></i>
+                                </div>
+                                <div>Card Payment</div>
+                            </div>
+                        </div>
+                        
+                        <div class="payment-form">
+                            <div class="form-group">
+                                <label for="payment-amount" class="form-label">Payment Amount</label>
+                                <input type="number" id="payment-amount" class="form-control" value="91.00">
+                            </div>
+                            <div class="form-group">
+                                <label for="mobile-number" class="form-label">Mobile Money Number</label>
+                                <input type="tel" id="mobile-number" class="form-control" value="+233 50 123 4567">
+                            </div>
+                            <div class="form-group">
+                                <label for="payment-reference" class="form-label">Payment Reference</label>
+                                <input type="text" id="payment-reference" class="form-control" value="L2025-0042-MAR" readonly>
+                            </div>
+                            <button class="btn btn-primary">Make Payment</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h3>Payment History</h3>
+                    </div>
+                    <div class="table-container">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Reference</th>
+                                    <th>Amount</th>
+                                    <th>Method</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Feb 15, 2025</td>
+                                    <td>L2025-0042-FEB</td>
+                                    <td>$91.00</td>
+                                    <td>Mobile Money</td>
+                                    <td><span class="badge badge-success">Completed</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Jan 15, 2025</td>
+                                    <td>L2025-0042-JAN</td>
+                                    <td>$91.00</td>
+                                    <td>Mobile Money</td>
+                                    <td><span class="badge badge-success">Completed</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Feb 01, 2025</td>
+                                    <td>L2025-0086-FEB</td>
+                                    <td>$20.00</td>
+                                    <td>Mobile Money</td>
+                                    <td><span class="badge badge-success">Completed</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Jan 01, 2025</td>
+                                    <td>L2025-0086-JAN</td>
+                                    <td>$20.00</td>
+                                    <td>Mobile Money</td>
+                                    <td><span class="badge badge-success">Completed</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Other dashboard tabs would be implemented similarly -->
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

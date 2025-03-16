@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - OzonePay</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <img src="images/logo.png" alt="OzonePay Logo">
+                <div class="logo-text">OzonePay</div>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="products.html" class="nav-link active">Products</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                <li class="nav-item"><a href="apply.html" class="nav-link">Apply Now</a></li>
+                <li class="nav-item"><a href="login.html" class="nav-link">Login</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="Toggle navigation menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <section class="page-header">
+            <div class="container">
+                <h1>Our Green Products</h1>
+                <p>Sustainable solutions for a greener future</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <!-- Product Categories Tabs -->
+                <div class="tab-container">
+                    <div class="tabs">
+                        <div class="tab active" data-tab="all">All Products</div>
+                        <div class="tab" data-tab="solar">Solar Power</div>
+                        <div class="tab" data-tab="ev">Electric Vehicles</div>
+                        <div class="tab" data-tab="cooking">Clean Cooking</div>
+                        <div class="tab" data-tab="agri">Agriculture</div>
+                    </div>
+                    
+                    <!-- All Products Tab -->
+                    <div class="tab-content active" id="tab-all">
+                        <div class="products">
+                            <!-- Solar Panel Product -->
+                            <div class="product-card" data-category="solar">
+                                <div class="product-badge">Popular</div>
+                                <img src="images/solar-panel.jpg" alt="Solar Panel Kit" class="product-img">
+                                <div class="product-details">
+                                    <h3 class="product-title">Solar Home System - 300W</h3>
+                                    <p class="product-description">Complete solar power system with panels, inverter, and battery storage for reliable home electricity</p>
+                                    <div class="product-price">$850</div>
+                                    <a href="apply.html?product=solar-home-300w" class="btn btn-primary">Finance Now</a>
+                                </div>
+                            </div>
+                            
+                            <!-- Electric Motorcycle -->
+                            <div class="product-card" data-category="ev">
+                                <img src="images/e-motorcycle.jpg" alt="Electric Motorcycle" class="product-img">
+                                <div class="product-details">
+                                    <h3 class="product-title">Electric Motorcycle</h3>
+                                    <p class="product-description">Eco-friendly motorcycle with 100km range per charge, perfect for ride-sharing and delivery services</p>
+                                    <div class="product-price">$1,600</div>
+                                    <a href="apply.html?product=electric-motorcycle" class="btn btn-primary">Finance Now</a>
+                                </div>
+                            </div>
+                            
+                            <!-- Clean Cooking Stove -->
+                            <div class="product-card" data-category="cooking">
+                                <img src="images/cooking-stove.jpg" alt="Clean Cooking Stove" class="product-img">
+                                <div class="product-details">
+                                    <h3 class="product-title">Clean Cooking Stove</h3>
+                                    <p class="product-description">Energy-efficient cooking stove that reduces smoke, fuel consumption, and indoor air pollution</p>
+                                    <div class="product-price">$120</div>
+                                    <a href="apply.html?product=clean-stove" class="btn btn-primary">Finance Now</a>
+                                </div>
+                            </div>
+                            
+                            <!-- Solar Water Pump -->
+                            <div class="product-card" data-category="solar agri">
+                                <div class="product-badge">New</div>
+                                <img src="images/solar-pump.jpg" alt="Solar Water Pump" class="product-img">
+                                <div class="product-details">
+                                    <h3 class="product-title">Solar Water Pump</h3>
+                                    <p class="product-description">Efficient irrigation solution powered by solar energy, replacing diesel pumps for farmers</p>
+                                    <div class="product-price">$750</div>
+                                    <a href="apply.html?product=solar-pump" class="btn btn-primary">Finance Now</a>
+                                </div>
+                            </div>
+                            
+                            <!-- Electric Tuk-Tuk -->
+                            <div class="product-card" data-category="ev">
+                                <img src="images/e-tuktuk.jpg" alt="Electric Tuk-Tuk" class="product-img">
+                                <div class="product-details">
+                                    <h3 class="product-title">Electric Tuk-Tuk</h3>
+                                    <p class="product-description">Three-wheeled electric vehicle for passenger transport with lower operating costs than traditional tuk-tuks</p>
+                                    <div class="product-price">$3,200</div>
+                                    <a href="apply.html?product=e-tuktuk" class="btn btn-primary">Finance Now</a>
+                                </div>
+                            </div>
+                            
+                            <!-- Drought-Resistant Seeds -->
+                            <div class="product-card" data-category="agri">
+                                <img src="images/seeds.jpg" alt="Drought-Resistant Seeds" class="product-img">
+                                <div class="product-details">
+                                    <h3 class="product-title">Drought-Resistant Seed Package</h3>
+                                    <p class="product-description">Climate-resilient seed varieties that can withstand harsh weather conditions and improve crop yields</p>
+                                    <div class="product-price">$85</div>
+                                    <a href="apply.html?product=drought-seeds" class="btn btn-primary">Finance Now</a>
+                                </div>
+                            </div>
+                            
+                            <!-- Solar Refrigerator -->
+                            <div class="product-card" data-category="solar">
+                                <img src="images/solar-fridge.jpg" alt="Solar Refrigerator" class="product-img">
+                                <div class="product-details">
+                                    <h3 class="product-title">Solar Refrigerator</h3>
+                                    <p class="product-description">Energy-efficient refrigeration solution powered by solar energy, ideal for homes and small businesses</p>
+                                    <div class="product-price">$980</div>
+                                    <a href="apply.html?product=solar-fridge" class="btn btn-primary">Finance Now</a>
+                                </div>
+                            </div>
+                            
+                            <!-- Biogas System -->
+                            <div class="product-card" data-category="cooking">
+                                <img src="images/biogas.jpg" alt="Biogas System" class="product-img">
+                                <div class="product-details">
+                                    <h3 class="product-title">Home Biogas System</h3>
+                                    <p class="product-description">Convert organic waste into cooking gas and liquid fertilizer, perfect for rural households</p>
+                                    <div class="product-price">$520</div>
+                                    <a href="apply.html?product=biogas" class="btn btn-primary">Finance Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Solar Power Tab -->
+                    <div class="tab-content" id="tab-solar">
+                        <div class="products" id="solar-products">
+                            <!-- Solar products will be populated by JavaScript -->
+                        </div>
+                    </div>
+                    
+                    <!-- Electric Vehicles Tab -->
+                    <div class="tab-content" id="tab-ev">
+                        <div class="products" id="ev-products">
+                            <!-- EV products will be populated by JavaScript -->
+                        </div>
+                    </div>
+                    
+                    <!-- Clean Cooking Tab -->
+                    <div class="tab-content" id="tab-cooking">
+                        <div class="products" id="cooking-products">
+                            <!-- Cooking products will be populated by JavaScript -->
+                        </div>
+                    </div>
+                    
+                    <!-- Agriculture Tab -->
+                    <div class="tab-content" id="tab-agri">
+                        <div class="products" id="agri-products">
+                            <!-- Agriculture products will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Carbon Impact Section -->
+        <section class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">Environmental Impact</h2>
+                <div class="features">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h3 class="feature-title">Carbon Reduction</h3>
+                        <p>Our products help reduce carbon emissions, contributing to a cleaner environment and fighting climate change.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-coins"></i>
+                        </div>
+                        <h3 class="feature-title">Carbon Credits</h3>
+                        <p>Earn carbon credits that can help offset your financing costs when you choose our green products.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-hand-holding-heart"></i>
+                        </div>
+                        <h3 class="feature-title">Community Impact</h3>
+                        <p>Improve health, create jobs, and build resilience in your community with sustainable technologies.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Ready to Go Green?</h2>
+                    <p>Apply for financing today and start your journey to sustainable living and economic savings.</p>
+                    <a href="apply.html" class="btn btn-primary">Apply Now</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="logo">
+                        <img src="images/logo.png" alt="OzonePay Logo">
+                        <div class="logo-text">OzonePay</div>
+                    </div>
+                    <p>Bridging the green financing gap in Africa with technology-based solutions for a sustainable future.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="apply.html">Apply Now</a></li>
+                        <li><a href="login.html">Login</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Products</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" data-tab="solar">Solar Solutions</a></li>
+                        <li><a href="#" data-tab="ev">Electric Vehicles</a></li>
+                        <li><a href="#" data-tab="cooking">Clean Cooking</a></li>
+                        <li><a href="#" data-tab="agri">Agricultural Tech</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Green Street, Accra, Ghana</li>
+                        <li><i class="fas fa-phone"></i> +233 50 123 4567</li>
+                        <li><i class="fas fa-envelope"></i> info@ozonepay.com</li>
+                    </ul>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 OzonePay. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/products.js"></script>
+</body>
+</html>

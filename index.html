@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OzonePay - Bridging the Green Financing Gap</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <img src="images/logo.png" alt="OzonePay Logo">
+                <div class="logo-text">OzonePay</div>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+                <li class="nav-item"><a href="products.html" class="nav-link">Products</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                <li class="nav-item"><a href="apply.html" class="nav-link">Apply Now</a></li>
+                <li class="nav-item"><a href="login.html" class="nav-link">Login</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="Toggle navigation menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Bridging the Green Financing Gap</h1>
+                    <p class="hero-description">OzonePay provides affordable green asset financing to individuals, households, and farmer groups to acquire solar power systems, electric vehicles, clean cooking stoves, and more.</p>
+                    <div class="hero-buttons">
+                        <a href="apply.html" class="btn btn-primary">Get Started</a>
+                        <a href="about.html" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Our Green Financing Solutions</h2>
+                <div class="features">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-solar-panel"></i>
+                        </div>
+                        <h3 class="feature-title">Solar Power Systems</h3>
+                        <p>Access affordable financing for solar power solutions to reduce energy costs and provide clean electricity.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-car-side"></i>
+                        </div>
+                        <h3 class="feature-title">Electric Vehicles</h3>
+                        <p>Finance electric vehicles to reduce maintenance costs and carbon emissions for drivers and gig workers.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-fire"></i>
+                        </div>
+                        <h3 class="feature-title">Clean Cooking Solutions</h3>
+                        <p>Eco-friendly cooking stoves to reduce reliance on charcoal, improving air quality and health.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">How It Works</h2>
+                <div class="features">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-user-check"></i>
+                        </div>
+                        <h3 class="feature-title">Apply Online</h3>
+                        <p>Complete our simple online application with KYC information for credit scoring.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h3 class="feature-title">Get Approved</h3>
+                        <p>Receive quick approval and choose your preferred green technology products.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-wallet"></i>
+                        </div>
+                        <h3 class="feature-title">Flexible Repayments</h3>
+                        <p>Make flexible daily, weekly or monthly repayments via mobile money, with carbon credits to offset costs.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Calculator Section -->
+        <section class="section">
+            <div class="container">
+                <div class="calculator">
+                    <h2 class="section-title">Green Financing Calculator</h2>
+                    <div class="slider-container">
+                        <label class="form-label">Product Value (USD)</label>
+                        <input type="range" min="100" max="5000" value="1000" class="range-slider" id="loan-amount">
+                        <div class="slider-values">
+                            <span>$100</span>
+                            <span id="amount-value">$1000</span>
+                            <span>$5000</span>
+                        </div>
+                    </div>
+                    <div class="slider-container">
+                        <label class="form-label">Term Length (months)</label>
+                        <input type="range" min="3" max="36" value="12" class="range-slider" id="loan-term">
+                        <div class="slider-values">
+                            <span>3 months</span>
+                            <span id="term-value">12 months</span>
+                            <span>36 months</span>
+                        </div>
+                    </div>
+                    <div class="calculator-result">
+                        <div class="result-item">
+                            <span class="result-label">Estimated Monthly Payment:</span>
+                            <span class="result-value" id="monthly-payment">$85.61</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Estimated Carbon Credits:</span>
+                            <span class="result-value" id="carbon-credits">1.2 tons CO₂ / year</span>
+                        </div>
+                        <div class="result-highlight">
+                            Save up to $200 annually on energy costs!
+                        </div>
+                        <a href="apply.html" class="btn btn-primary" style="width: 100%;">Apply Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">Success Stories</h2>
+                <div class="testimonials">
+                    <div class="testimonial-card">
+                        <div class="testimonial-img">
+                            <img src="images/farmer.jpg" alt="Farmer with solar irrigation">
+                        </div>
+                        <div class="testimonial-content">
+                            <h3 class="testimonial-name">John K.</h3>
+                            <p class="testimonial-role">Smallholder Farmer</p>
+                            <p class="testimonial-text">"With OzonePay financing, I purchased a solar irrigation system that increased my crop yields by 40% and eliminated diesel costs."</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-img">
+                            <img src="images/driver.jpg" alt="Driver with electric vehicle">
+                        </div>
+                        <div class="testimonial-content">
+                            <h3 class="testimonial-name">Sarah M.</h3>
+                            <p class="testimonial-role">Ride-share Driver</p>
+                            <p class="testimonial-text">"Switching to an electric vehicle through OzonePay has reduced my maintenance costs and increased my daily earnings as a ride-share driver."</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-img">
+                            <img src="images/family.jpg" alt="Family with clean cooking stove">
+                        </div>
+                        <div class="testimonial-content">
+                            <h3 class="testimonial-name">Mary D.</h3>
+                            <p class="testimonial-role">Homemaker</p>
+                            <p class="testimonial-text">"My family's health has improved since we got a clean cooking stove. No more smoke in our home and we spend less on fuel."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Partners Section -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Our Partners</h2>
+                <div class="partners">
+                    <div class="partner-logo"><img src="images/partner1.png" alt="Solar Tech Partner"></div>
+                    <div class="partner-logo"><img src="images/partner2.png" alt="EV Manufacturer"></div>
+                    <div class="partner-logo"><img src="images/partner3.png" alt="Mobile Money Provider"></div>
+                    <div class="partner-logo"><img src="images/partner4.png" alt="Agricultural Organization"></div>
+                    <div class="partner-logo"><img src="images/partner5.png" alt="Climate Finance Institution"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="logo">
+                        <img src="images/logo.png" alt="OzonePay Logo">
+                        <div class="logo-text">OzonePay</div>
+                    </div>
+                    <p>Bridging the green financing gap in Africa with technology-based solutions for a sustainable future.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="apply.html">Apply Now</a></li>
+                        <li><a href="login.html">Login</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Products</h3>
+                    <ul class="footer-links">
+                        <li><a href="products.html#solar">Solar Solutions</a></li>
+                        <li><a href="products.html#ev">Electric Vehicles</a></li>
+                        <li><a href="products.html#cooking">Clean Cooking</a></li>
+                        <li><a href="products.html#agri">Agricultural Tech</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Green Street, Accra, Ghana</li>
+                        <li><i class="fas fa-phone"></i> +233 50 123 4567</li>
+                        <li><i class="fas fa-envelope"></i> info@ozonepay.com</li>
+                    </ul>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 OzonePay. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/calculator.js"></script>
+</body>
+</html>
